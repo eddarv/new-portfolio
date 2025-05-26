@@ -1,0 +1,258 @@
+---
+import logo1 from '../assets/logo1.png';
+import logo2 from '../assets/logo2.png';
+import logo3 from '../assets/logo3.png';
+import logo4 from '../assets/logo4.png';
+import logo5 from '../assets/logo5.png';
+import logo6 from '../assets/logo6.png';
+import logo7 from '../assets/logo7.png';
+import logo8 from '../assets/logo8.png';
+import logo9 from '../assets/logo9.png';
+import logo10 from '../assets/logo10.png';
+import logo11 from '../assets/logo11.png';
+import logo12 from '../assets/logo12.png';
+import logo13 from '../assets/logo13.png';
+import logo14 from '../assets/logo14.png';
+import logo15 from '../assets/logo15.png';
+import logo16 from '../assets/logo16.png';
+import logo17 from '../assets/logo17.png';
+import logo18 from '../assets/logo18.png';
+import logo19 from '../assets/logo19.png';
+import logo20 from '../assets/logo20.png';
+import logo21 from '../assets/logo21.png';
+import logo22 from '../assets/logo22.png';
+import logo23 from '../assets/logo23.png';
+
+
+---
+<section class="marquees">
+    <div class="marquee__1">
+        <div class="marquee__roller__1">
+            <div class="marquee__items">
+                <img src={logo1.src} alt="astro" class="marquee__logo">
+                <img src={logo2.src} alt="react" class="marquee__logo">
+                <img src={logo3.src} alt="vue" class="marquee__logo">
+                <img src={logo4.src} alt="html+js+css" class="marquee__logo">
+                <img src={logo5.src} alt="node" class="marquee__logo">
+                <img src={logo6.src} alt="python" class="marquee__logo">
+                <img src={logo7.src} alt="fastapi" class="marquee__logo">
+                <img src={logo8.src} alt="php" class="marquee__logo ">
+                <img src={logo9.src} alt="wordpress" class="marquee__logo">
+                <img src={logo10.src} alt="figma" class="marquee__logo">
+                <img src={logo11.src} alt="next" class="marquee__logo ">
+                <img src={logo12.src} alt="mongo" class="marquee__logo ">
+                <img src={logo13.src} alt="mysql" class="marquee__logo">
+                <img src={logo14.src} alt="windsurf" class="marquee__logo">
+                <img src={logo15.src} alt="typescript" class="marquee__logo">
+                <img src={logo16.src} alt="arduino" class="marquee__logo ">
+                <img src={logo17.src} alt="checkoutchamp" class="marquee__logo">
+                <img src={logo18.src} alt="github" class="marquee__logo">
+                <img src={logo19.src} alt="shopify" class="marquee__logo ">
+                <img src={logo20.src} alt="google tag manager" class="marquee__logo">
+                <img src={logo21.src} alt="fb business manager" class="marquee__logo">
+                <img src={logo22.src} alt="docker" class="marquee__logo">
+                <img src={logo23.src} alt="webflow" class="marquee__logo">
+            </div>
+        </div>
+        
+    </div>
+    <div class="marquee__2">
+        <div class="marquee__roller__2">
+            <div class="marquee__items">
+                <img src={logo1.src} alt="astro" class="marquee__logo">
+                <img src={logo2.src} alt="react" class="marquee__logo">
+                <img src={logo3.src} alt="vue" class="marquee__logo">
+                <img src={logo4.src} alt="html+js+css" class="marquee__logo">
+                <img src={logo5.src} alt="node" class="marquee__logo">
+                <img src={logo6.src} alt="python" class="marquee__logo">
+                <img src={logo7.src} alt="fastapi" class="marquee__logo">
+                <img src={logo8.src} alt="php" class="marquee__logo ">
+                <img src={logo9.src} alt="wordpress" class="marquee__logo">
+                <img src={logo10.src} alt="figma" class="marquee__logo">
+                <img src={logo11.src} alt="next" class="marquee__logo">
+                <img src={logo12.src} alt="mongo" class="marquee__logo">
+                <img src={logo13.src} alt="mysql" class="marquee__logo">
+                <img src={logo14.src} alt="windsurf" class="marquee__logo">
+                <img src={logo15.src} alt="typescript" class="marquee__logo">
+                <img src={logo16.src} alt="arduino" class="marquee__logo">
+                <img src={logo17.src} alt="checkoutchamp" class="marquee__logo">
+                <img src={logo18.src} alt="github" class="marquee__logo">
+                <img src={logo19.src} alt="shopify" class="marquee__logo">
+                <img src={logo20.src} alt="google tag manager" class="marquee__logo">
+                <img src={logo21.src} alt="fb business manager" class="marquee__logo">
+                <img src={logo22.src} alt="docker" class="marquee__logo">
+                <img src={logo23.src} alt="webflow" class="marquee__logo">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .marquees{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+        margin-top: 120px;
+        position: relative;
+        padding-bottom: 120px;
+        box-sizing: border-box;
+
+    }
+
+    .marquee__1{
+        width: 100%;
+        height: 80px;
+        background: linear-gradient(to right, #42D6EAaa 0%, #135EF278 50%, #AC40F278 100%);
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .marquee__2{
+        width: 100%;
+        height: 80px;
+        background: linear-gradient(to left, #42D6EAaa 0%, #135EF278 50%, #AC40F278 100%);
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .marquee__items{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 60px;
+    }
+
+    .marquee__1 .marquee__items .marquee__logo:first-child{
+        padding-left: 60px;
+    }
+    
+    .marquee__2 .marquee__items .marquee__logo:last-child{
+        padding-right: 60px;
+    }
+
+    .marquee__2 .marquee__roller__2, .marquee__2 .marquee__items{
+        justify-content: flex-end;
+    } 
+    
+    .marquee__logo{
+        height: calc(100% - 40px);
+        filter: brightness(20);
+
+    }
+
+
+    .marquee__roller__1{
+        height: 100%;
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: max-content;
+    }
+
+    .marquee__roller__2{
+        height: 100%;
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: max-content;
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const marqueeContainer = document.querySelector('.marquee__1');
+    const originalRoller = document.querySelector('.marquee__roller__1');
+    let currentRoller = originalRoller;
+    let cloneRoller = null;
+
+    //second marquee
+    const marqueeContainer2 = document.querySelector('.marquee__2');
+    const originalRoller2 = document.querySelector('.marquee__roller__2');
+    let currentRoller2 = originalRoller2;
+    let cloneRoller2 = null;
+
+
+    const scrollSpeed = 0.5; // Adjust this value to change the speed
+
+    function createClone() {
+      cloneRoller = currentRoller.cloneNode(true);
+      cloneRoller.style.transform = `translateX(${marqueeContainer.offsetWidth}px)`;
+      marqueeContainer.appendChild(cloneRoller);
+    }
+
+    function createClone2() {
+      cloneRoller2 = currentRoller2.cloneNode(true);
+      cloneRoller2.style.transform = `translateX(-${marqueeContainer2.offsetWidth}px)`;
+      marqueeContainer2.appendChild(cloneRoller2);
+    }
+
+    function animateMarquee() {
+      const currentPosition = parseFloat(currentRoller.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
+      currentRoller.style.transform = `translateX(${currentPosition - scrollSpeed}px)`;
+
+      //second marquee
+
+      const currentPosition2 = parseFloat(currentRoller2.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
+      currentRoller2.style.transform = `translateX(${currentPosition2 + scrollSpeed}px)`;
+
+
+    //   console.log(currentPosition + currentRoller.offsetWidth)
+
+      if (cloneRoller) {
+        if (currentRoller.getBoundingClientRect().right <= window.innerWidth) {
+
+          const clonePosition = parseFloat(cloneRoller.style.transform.replace('translateX(', '').replace('px)', ''));
+          cloneRoller.style.transform = `translateX(${clonePosition - scrollSpeed}px)`;
+
+        // Check if the original roller is out of view
+
+            if (currentPosition + currentRoller.offsetWidth < 0) {
+                marqueeContainer.removeChild(currentRoller);
+                currentRoller = cloneRoller;
+                cloneRoller = null;
+                createClone();
+            }
+
+        }
+      }
+
+
+      if (cloneRoller2) {
+        if (currentRoller2.getBoundingClientRect().left >= 0) {
+
+          const clonePosition2 = parseFloat(cloneRoller2.style.transform.replace('translateX(', '').replace('px)', ''));
+          cloneRoller2.style.transform = `translateX(${clonePosition2 + scrollSpeed}px)`;
+
+        // Check if the original roller is out of view
+            if (currentRoller2.getBoundingClientRect().left >= window.innerWidth) {
+                marqueeContainer2.removeChild(currentRoller2);
+                currentRoller2 = cloneRoller2;
+                cloneRoller2 = null;
+                createClone2();
+            }
+
+        }
+      }
+
+      requestAnimationFrame(animateMarquee);
+    }
+
+    createClone();
+    createClone2();
+    animateMarquee();
+  });
+</script>

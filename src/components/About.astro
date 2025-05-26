@@ -1,0 +1,61 @@
+---
+import edward from '../assets/Edward.png';
+---
+
+<section class="about" id="about">
+    <div class="about__texts">
+        <h2 class="about__title">About me</h2>
+        <div class="about__paragraph">Hey, I'm Edward! I'm a <b>Full Stack Web Developer</b> and <b>Electronic Engineer</b> who loves turning creative ideas into amazing websites and apps. Since 2021, I've been crafting engaging, fast, and user-friendly solutions using <b>Astro, React, Vue.js, Node.js</b>, and <b>FastAPI</b>.
+            I don't just build—I obsess over details and performance, ensuring every project stands out.
+            
+            Away from the screen, you'll probably catch me at the piano or singing my favorite tunes. I'm deeply inspired by art and aesthetics, and this passion fuels my approach to design and development. Being naturally curious and introspective, I always seek new ways to grow personally and professionally.
+            
+            Whether you're here to collaborate or just say hello, I'd love to connect and <b>create something exceptional together!</b>
+        </div>
+    </div>
+    <div class="about__img-container">
+        <img src={edward.src} alt="Edward" class="about__img">
+    </div>
+</section>
+
+<style>
+    .about{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 120px;
+        font-family: "Montserrat";
+        color: #fff;
+    }
+
+    .about__title{
+        font-size: 70px;
+        padding-bottom: 22px;
+        margin: 0;
+        opacity: 70%;
+        font-weight: 500;
+    }
+
+    .about__paragraph{
+        font-size: 18px;
+        line-height: 26px;
+        margin: 0;
+        opacity: 70%;
+        white-space: pre-line;
+        font-weight: 20;
+    }
+
+    .about__img-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .about__img{
+        width: 100%;
+    }
+</style>

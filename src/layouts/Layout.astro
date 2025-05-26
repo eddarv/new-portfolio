@@ -5,10 +5,15 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<title>Edward RV - Portfolio</title>
 	</head>
 	<body>
-		<slot />
+		<div class="main-content">
+			<slot />
+		</div>
 	</body>
 </html>
 
@@ -18,5 +23,21 @@
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		background: #060609;
+		font-family: Montserrat;
+		display: flex;
+		justify-content: center;
+scroll-behavior: smooth;
+	}
+	.main-content{
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: column;
+		max-width: 1920px;
+		width: 100%;
+	}
+	*, *::after, *::before{
+		box-sizing: border-box;
+
 	}
 </style>

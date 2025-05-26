@@ -1,0 +1,580 @@
+---
+import logo3d from '../assets/logo_3d.png';
+import vector from '../assets/Vector2.svg';
+
+---
+
+<section class="hero" id="hero">
+    <div class="hero__background">
+        <div class="pentagon pentagon_1"></div>
+        <div class="pentagon pentagon_2"></div>
+        <div class="pentagon pentagon_3"></div>
+        <div class="pentagon pentagon_4"></div>
+        <div class="pentagon pentagon_5"></div>
+        <div class="pentagon pentagon_6"></div>
+        <div class="pentagon pentagon_7"></div>
+        <div class="pentagon pentagon_8"></div>
+        <div class="pentagon pentagon_9"></div>
+        <div class="pentagon pentagon_10"></div>
+        <div class="pentagon pentagon_11"></div>
+        <div class="pentagon pentagon_12"></div>
+        <div class="pentagon pentagon_13"></div>
+        <div class="pentagon pentagon_14"></div>
+        <div class="pentagon pentagon_15"></div>
+        <div class="pentagon pentagon_16"></div>
+        <div class="pentagon pentagon_17"></div>
+        <div class="pentagon pentagon_18"></div>
+        <div class="pentagon pentagon_19"></div>
+        <div class="pentagon pentagon_20"></div>
+        <div class="pentagon pentagon_21"></div>
+        <div class="pentagon pentagon_22"></div>
+        <div class="pentagon pentagon_23"></div>
+        <div class="hero__logo-container">
+            <img src={logo3d.src} alt="3d logo" class="hero__logo">
+            <div class="hero__logo--bright-1"></div>
+            <div class="hero__logo--bright-2"></div>
+
+        </div>
+        <div class="hero__tag hero__tag--1">
+            <img src={vector.src} class="hero__tag__arrow"/>
+            <div class="hero__tag__text">Electronic Engineer</div>
+        </div>
+        <div class="hero__tag hero__tag--2">
+            <img src={vector.src} class="hero__tag__arrow"/>
+            <div class="hero__tag__text">Web Designer</div>
+        </div>
+        <div class="hero__tag hero__tag--3">
+            <img src={vector.src} class="hero__tag__arrow"/>
+            <div class="hero__tag__text">Full Stack Developer</div>
+        </div>
+    </div>
+    <div class="hero__content">
+        <article class="hero__graphics">
+            
+        </article>
+        <article class="hero__titles">
+            <code class="hero__code hero__code--1">
+                &lt;html&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;header&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                &nbsp;&nbsp;&nbsp;&lt;header&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>   
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 class=”title”&gt;
+            </code>
+            <h1 class="hero__title">One <br>Developer</h1>
+            <code class="hero__code hero__code--2">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1/&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 class="subtitle"&gt;  
+            </code>
+            <h2 class="hero__subtitle">Is all your web needs</h2>
+            <code class="hero__code hero__code--3">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2/&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="cta"&gt;<br>   
+            </code>
+            <a href="#contact" class="hero__cta">Let's work together</a>
+            <code class="hero__code hero__code--4">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button/&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;body/&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;footer&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                &nbsp;&nbsp;&nbsp;&lt;footer/&gt;<br> 
+                &lt;html/&gt;   
+            </code>
+        </article>
+    </div>
+</section>
+
+<style>
+    .hero{
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .hero__background{
+        width: 50%;
+        height: 100%;
+        position: absolute;
+    }
+    .pentagon{
+        position: absolute;
+        width: 150px;
+	    height: 150px;
+        
+        clip-path: polygon(50% 0%, 97.6% 34.4%, 79.6% 90.4%, 20.4% 90.4%, 2.4% 34.4%);
+        top: 50%;
+        left: 50%;
+    }
+    .pentagon::after{
+        content: " ";
+        position: absolute;
+        background-color: #060609;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        clip-path: polygon(50% 0%, 97.6% 34.4%, 79.6% 90.4%, 20.4% 90.4%, 2.4% 34.4%);
+    }
+    .pentagon_1{
+        width: 1000px;
+        height: 1000px;
+        z-index: 0;
+        background: #61585930;
+        transform: translate(-50%, -50%) rotate(-65.55deg);
+    }
+
+    .pentagon_2{
+        width: 898px;
+        height: 898px;
+        z-index: 0;
+        background: #61585940;
+        transform: translate(calc(-50%), calc(-50%)) rotate(-55.55deg);
+    }
+
+    .pentagon_3{
+        width: 807px;
+        height: 807px;
+        z-index: 0;
+        background: #5f3c4050;
+        transform: translate(calc(-50%), calc(-50%)) rotate(-45.55deg);
+    }
+
+    .pentagon_4{
+        width: 720px;
+        height: 720px;
+        z-index: 0;
+        background: #5d212860;
+        transform: translate(calc(-50%), calc(-50%)) rotate(-35.55deg);
+    }
+
+    .pentagon_5{
+        width: 645px;
+        height: 645px;
+        z-index: 0;
+        background: #33171C;
+        transform: translate(calc(-50%), calc(-50%)) rotate(-25.55deg);
+    }
+
+    .pentagon_6{
+        width: 575px;
+        height: 575px;
+        z-index: 0;
+        background: #401E24;
+        transform: translate(calc(-50%), calc(-50%)) rotate(-15.55deg);
+    }
+
+    .pentagon_7{
+        width: 515px;
+        height: 515px;
+        z-index: 0;
+        background: #401e27;
+        transform: translate(calc(-50%), calc(-50%)) rotate(-5.55deg);
+    }
+
+    .pentagon_8{
+        width: 458px;
+        height: 458px;
+        z-index: 0;
+        background: rgb(91, 39, 67);
+        transform: translate(calc(-50%), calc(-50%)) rotate(5.45deg);
+    }
+
+    .pentagon_9{
+        width: 410px;
+        height: 410px;
+        z-index: 0;
+        background: rgb(91, 39, 67);
+        transform: translate(calc(-50%), calc(-50%)) rotate(15.45deg);
+    }
+
+    .pentagon_10{
+        width: 365px;
+        height: 365px;
+        z-index: 0;
+        background: rgb(91, 39, 78);
+        transform: translate(calc(-50%), calc(-50%)) rotate(25.45deg);
+    }
+
+    .pentagon_11{
+        width: 325px;
+        height: 325px;
+        z-index: 0;
+        background: rgb(111, 45, 101);
+        transform: translate(calc(-50%), calc(-50%)) rotate(35.45deg);
+    }
+
+    .pentagon_12{
+        width: 288px;
+        height: 288px;
+        z-index: 0;
+        background: rgb(121, 52, 127);
+        transform: translate(calc(-50%), calc(-50%)) rotate(45.45deg);
+    }
+
+    .pentagon_13{
+        width: 256px;
+        height: 256px;
+        z-index: 0;
+        background: rgb(129, 60, 148);
+        transform: translate(calc(-50%), calc(-50%)) rotate(55.45deg);
+    }
+
+    .pentagon_14{
+        width: 228px;
+        height: 228px;
+        z-index: 0;
+        background: rgb(125, 67, 170);
+        transform: translate(calc(-50%), calc(-50%)) rotate(65.45deg);
+    }
+
+    .pentagon_15{
+        width: 204px;
+        height: 204px;
+        z-index: 0;
+        background: rgb(111, 67, 183);
+        transform: translate(calc(-50%), calc(-50%)) rotate(75.45deg);
+    }
+
+    .pentagon_16{
+        width: 183px;
+        height: 183px;
+        z-index: 0;
+        background: rgb(83, 58, 181);
+        transform: translate(calc(-50%), calc(-50%)) rotate(85.45deg);
+    }
+
+    .pentagon_17{
+        width: 163px;
+        height: 163px;
+        z-index: 0;
+        background: rgb(54, 54, 187);
+        transform: translate(calc(-50%), calc(-50%)) rotate(95.45deg);
+    }
+
+    .pentagon_18{
+        width: 145px;
+        height: 145px;
+        z-index: 0;
+        background: rgb(45, 63, 185);
+        transform: translate(calc(-50%), calc(-50%)) rotate(105.45deg);
+    }
+
+    .pentagon_19{
+        width: 127px;
+        height: 127px;
+        z-index: 0;
+        background: rgb(36, 71, 187);
+        transform: translate(calc(-50%), calc(-50%)) rotate(115.45deg);
+    }
+
+    .pentagon_20{
+        width: 112px;
+        height: 112px;
+        z-index: 0;
+        background: rgb(36, 106, 187);
+        transform: translate(calc(-50%), calc(-50%)) rotate(125.45deg);
+    }
+
+    .pentagon_21{
+        width: 98px;
+        height: 98px;
+        z-index: 0;
+        background: rgb(34, 136, 187);
+        transform: translate(calc(-50%), calc(-50%)) rotate(135.45deg);
+    }
+
+    .pentagon_22{
+        width: 85px;
+        height: 85px;
+        z-index: 0;
+        background: rgb(34, 167, 208);
+        transform: translate(calc(-50%), calc(-50%)) rotate(145.45deg);
+    }
+
+    .pentagon_23{
+        width: 73px;
+        height: 73px;
+        z-index: 0;
+        background: rgb(30, 220, 220);
+        transform: translate(calc(-50%), calc(-50%)) rotate(155.45deg);
+    }
+
+    .hero__content{
+        position: relative;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .hero__graphics{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .hero__logo-container{
+        width: 350px;
+        height: 350px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero__logo{
+        width: 100%;
+    }
+
+    .hero__tag{
+        position: absolute;
+    }
+
+    .hero__tag__text{
+        min-width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+            140deg,
+            rgba(172, 64, 242, 1) 14%,
+            rgba(19, 94, 242, 1) 50%,
+            rgba(7, 7, 13, 0.24) 98%
+        );
+        border-radius: 55555px;
+        font-family: "Montserrat";
+        font-weight: 10px;
+        color: #fff;
+        padding: 4px;
+    }
+
+    .hero__tag__arrow{
+        position: absolute;
+        width: 18px;
+        height: 18px;
+
+
+    }
+
+    .hero__tag--1{
+        left: calc(50%);
+        top: calc(50% - 200px);
+    }
+
+    .hero__tag--2{
+        left: calc(50% + 160px);
+        top: calc(50%);
+    }
+
+    .hero__tag--3{
+        left: calc(50% - 280px);
+        top: calc(50% + 120px);
+    }
+
+    .hero__tag--1 > .hero__tag__text{
+        background: linear-gradient(
+            45deg,
+            rgba(172, 64, 242, 1) 14%,
+            rgba(19, 94, 242, 1) 50%,
+            rgba(7, 7, 13, 0.24) 98%
+
+        );
+    }
+
+    .hero__tag--3 > .hero__tag__text{
+        background: linear-gradient(
+            45deg,
+            rgba(7, 7, 13, 0.24) 2%,
+            rgba(19, 94, 242, 1) 50%,
+            rgba(172, 64, 242, 1) 86%
+
+        );
+    }
+
+    .hero__tag--1 > .hero__tag__arrow{
+        top: 27px;
+        left: -10px;
+        transform: rotate(40deg);
+
+    }
+    .hero__tag--2 > .hero__tag__arrow{
+        top: 5px;
+        left: -20px;
+        transform: rotate(108deg);
+    }
+
+    .hero__tag--3 > .hero__tag__arrow{
+        top: -20px;
+        right: -10px;
+        transform: rotate(108deg);
+    }
+
+    .hero__logo--bright-1{
+        width: 250px;
+        height: 250px;
+        background: radial-gradient(rgba(255, 255, 255, 1) 0%,rgba(255, 255, 255, 0.3) 15%, rgba(255, 255, 255, 0) 30%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(calc(-50% - 50px), calc(-50% - 50px));
+    }
+    .hero__logo--bright-2{
+        width: 250px;
+        height: 250px;
+        background: radial-gradient(rgba(255, 255, 255, 1) 0%,rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0) 20%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(calc(-50% - 10px), calc(-50% - 10px));
+    }
+
+    .hero__titles{
+        padding-left: 80px;
+    }
+
+    .hero__title{
+        font-family: "Montserrat";
+        color: #fff;
+        opacity: 70%;
+        font-size: 80px;
+        font-weight: 500;
+        padding-left: 70px;
+        margin: 5px 0;
+    }
+
+    .hero__subtitle{
+        font-family: "Montserrat";
+        color: #fff;
+        opacity: 70%;
+        font-size: 40px;
+        font-weight: 400;
+        padding-left: 70px;
+        margin: 5px 0;
+
+    }
+
+    .hero__code{
+        font-family: "Montserrat";
+        color: #fff;
+        opacity: 70%;
+        font-size: 20px;
+        font-weight: 10;
+        line-height: 30px;
+        position: relative;
+    }
+    .hero__code--1::after{
+        position: absolute;
+        bottom: 0;
+        left: 0;  
+        height: 100%;
+        width: 100%;
+        content: "";
+        background: linear-gradient(to top,
+        #060609bb 0%, 
+        #060609ff 100%
+        );
+        pointer-events: none; 
+    }
+    .hero__code--2::after{
+        position: absolute;
+        bottom: 0;
+        left: 0;  
+        height: 100%;
+        width: 100%;
+        content: "";
+        background: linear-gradient(to top,
+        #06060977 0%, 
+        #060609aa 100%
+        );
+        pointer-events: none; 
+    }
+    .hero__code--3::after{
+        position: absolute;
+        bottom: 0;
+        left: 0;  
+        height: 100%;
+        width: 100%;
+        content: "";
+        background: linear-gradient(to top,
+        #060609aa 0%, 
+        #06060977 100%
+        );
+        pointer-events: none; 
+    }
+    .hero__code--4::after{
+        position: absolute;
+        bottom: 0;
+        left: 0;  
+        height: 100%;
+        width: 500%;
+        content: "";
+        background: linear-gradient(to top,
+        #060609ff 0%, 
+        #060609bb 100%
+        );
+        pointer-events: none; 
+    }
+
+@property --p {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 14%;
+}
+
+@property --p2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 53%;
+}
+
+@property --p3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 98%;
+}
+
+@property --c {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: rgba(172, 64, 242, 1);
+}
+
+
+.hero__cta{
+    --p:14%;
+    --p2:53%;
+    --p3:98%;
+    --c:rgba(172, 64, 242, 1);
+
+    cursor:pointer;
+    display: flex;
+    margin-left: 70px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 555px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    width: max-content;
+    transition:--p 0.5s,--p2 0.5s,--p3 0.5s, --c 0.5s;
+    background: linear-gradient(
+    140deg,
+    var(--c) var(--p),
+    rgba(19, 94, 242, 1) var(--p2),
+    rgba(7, 7, 13, 0.24) var(--p3)
+    );
+}
+
+.hero__cta:hover{
+    --p:14%;
+    --p2:100%;
+    --p3:100%;
+    --c:rgb(212, 64, 242);
+
+
+}
+</style>

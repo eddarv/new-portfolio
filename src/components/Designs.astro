@@ -1,0 +1,122 @@
+---
+import unloop from '../assets/Unloop.png';
+import relax from '../assets/Relax.png';
+
+---
+
+<section class="designs" id="designs">
+    <article class="designs__item">
+        <div class="designs__item__texts">
+            <h2 class="designs__title">Selected Designs</h2>
+            <div class="designs__inner-texts--left">
+                <h3 class="designs__item__title designs__item__title--right">UnloopNow</h3>
+                <div class="designs__item__paragraph designs__item__paragraph--right">UnloopNow is a mobile application designed for clients seeking to help users break free from harmful habits, such as excessive social media use, pornography consumption, and smoking.
+                    The app is built around the concept of "inner brightness"—a visual metaphor representing personal growth. As users progress toward their detox goals, their "brightness" increases, providing a sense of achievement.
+                    
+                    Additionally, UnloopNow includes various tools to support users in overcoming cravings and maintaining their commitment to a healthier lifestyle.
+                </div>
+            </div>
+        </div>
+        <div class="designs__item__img-container">
+            <img src={unloop.src} alt="UnloopNow" class="designs__item__img">
+        </div>
+    </article>
+    <article class="designs__item">
+        <div class="designs__item__img-container">
+            <img src={relax.src} alt="RelaxApp" class="designs__item__img">
+        </div>
+        <div class="designs__item__texts">
+            <div class="designs__inner-texts--right">
+                <h3 class="designs__item__title">RelaxApp</h3>
+                <div class="designs__item__paragraph">RelaxApp is a mobile application designed to help healthcare professionals manage stress during their demanding workdays. This app provides a sanctuary through guided meditations, soothing soundscapes, ASMR, and other audio-based relaxation tools.
+
+                    RelaxApp includes practical features like a daily journal, customizable search filters, an AI-powered chat for emotional support, and personalized usage insights. The interface combines serene nature imagery, calming color palettes, and minimalist design to enhance visual tranquility—delivering an elegant, premium experience tailored for iOS users.
+                </div>
+            </div>
+        </div>
+
+    </article>
+</section>
+
+<style>
+    .designs{
+        padding-top: 120px;
+        padding-left: 60px;
+        padding-right: 60px;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: "Montserrat";
+        color: #fff;
+        box-sizing: border-box;
+
+    }
+
+    .designs__title{
+        font-size: 70px;
+        padding-bottom: 120px;
+        margin: 0;
+        opacity: 70%;
+        font-weight: 500;
+        text-align: right;
+        padding-right: 80px;
+    }
+
+    .designs__item{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .designs__item__texts{
+        width: 50%;
+    }
+    .designs__item__title{
+        font-size: 40px;
+        padding-bottom: 22px;
+        margin: 0;
+        opacity: 70%;
+        font-weight: 500;
+
+    }
+    .designs__item__paragraph{
+        font-size: 18px;
+        line-height: 26px;
+        margin: 0;
+        opacity: 70%;
+        white-space: pre-line;
+        font-weight: 20;
+    }
+
+    .designs__item__paragraph--right, .designs__item__title--right{
+        text-align: right;
+    }
+
+    .designs__item__img-container{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .designs__inner-texts--left{
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        max-width: 650px;
+        justify-self: right;
+        padding-right: 80px;
+
+    }
+
+    .designs__inner-texts--right{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        max-width: 650px;
+        padding-left: 80px;
+
+    }
+
+</style>
