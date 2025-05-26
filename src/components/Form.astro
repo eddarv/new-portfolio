@@ -34,19 +34,7 @@
 import Swal from 'sweetalert2'
 
 
-emailjs.init({
-    publicKey: 'DvW4Ws9oIhhaqHVDv',
-    // Do not allow headless browsers
-    blockHeadless: true,
-    limitRate: {
-        // Set the limit rate for the application
-        id: 'app',
-        // Allow 1 request per 10s
-        throttle: 10000,
-    },
-});
-
-
+emailjs.init('DvW4Ws9oIhhaqHVDv');
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.form__grid__inputs');
