@@ -16,6 +16,8 @@ import logo from '../assets/logo.svg';
         </div>
     </a>
   </nav>
+  <div class="header__blur"></div>
+  <div class="header__blur--2"></div>
 </header>
 
 <style>
@@ -45,12 +47,16 @@ import logo from '../assets/logo.svg';
 
     .header__logo {
       width: 200px;
+      position: relative;
+      z-index: 1;
     }
 
     .header__nav {
       display: flex;
       align-items: center;
       gap: 50px;
+      position: relative;
+      z-index: 1;
     }
 
     .header__nav-item {
@@ -89,5 +95,26 @@ import logo from '../assets/logo.svg';
     .header__nav-item--contact:hover .header__nav-item__text{
         background: #06060900;
 
+    }
+    .header__blur{
+      width: 200%;
+      height: 100%;
+      position: absolute;
+      top: -20px;
+      left: -40px;
+      z-index: 0;
+      filter: blur(40px);
+      background: #150417;
+    }
+
+    .header__blur--2{
+      width: 200%;
+      height: 100%;
+      position: absolute;
+      top: -80px;
+      left: -40px;
+      z-index: 0;
+      filter: blur(40px);
+      background: #060606;
     }
   </style>

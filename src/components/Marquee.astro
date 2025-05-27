@@ -29,21 +29,21 @@ import logo23 from '../assets/logo23.png';
     <div class="marquee__1">
         <div class="marquee__roller__1">
             <div class="marquee__items">
-                <img src={logo1.src} alt="astro" class="marquee__logo">
+                <img src={logo1.src} alt="astro" class="marquee__logo astro">
                 <img src={logo2.src} alt="react" class="marquee__logo">
                 <img src={logo3.src} alt="vue" class="marquee__logo">
                 <img src={logo4.src} alt="html+js+css" class="marquee__logo">
-                <img src={logo5.src} alt="node" class="marquee__logo">
-                <img src={logo6.src} alt="python" class="marquee__logo">
-                <img src={logo7.src} alt="fastapi" class="marquee__logo">
+                <img src={logo5.src} alt="node" class="marquee__logo node">
+                <img src={logo6.src} alt="python" class="marquee__logo python">
+                <img src={logo7.src} alt="fastapi" class="marquee__logo fastapi">
                 <img src={logo8.src} alt="php" class="marquee__logo ">
                 <img src={logo9.src} alt="wordpress" class="marquee__logo">
-                <img src={logo10.src} alt="figma" class="marquee__logo">
-                <img src={logo11.src} alt="next" class="marquee__logo ">
+                <img src={logo10.src} alt="figma" class="marquee__logo figma">
+                <img src={logo11.src} alt="next" class="marquee__logo next">
                 <img src={logo12.src} alt="mongo" class="marquee__logo ">
-                <img src={logo13.src} alt="mysql" class="marquee__logo">
-                <img src={logo14.src} alt="windsurf" class="marquee__logo">
-                <img src={logo15.src} alt="typescript" class="marquee__logo">
+                <img src={logo13.src} alt="mysql" class="marquee__logo mysql">
+                <img src={logo14.src} alt="windsurf" class="marquee__logo windsurf">
+                <img src={logo15.src} alt="typescript" class="marquee__logo typescript">
                 <img src={logo16.src} alt="arduino" class="marquee__logo ">
                 <img src={logo17.src} alt="checkoutchamp" class="marquee__logo">
                 <img src={logo18.src} alt="github" class="marquee__logo">
@@ -51,7 +51,7 @@ import logo23 from '../assets/logo23.png';
                 <img src={logo20.src} alt="google tag manager" class="marquee__logo">
                 <img src={logo21.src} alt="fb business manager" class="marquee__logo">
                 <img src={logo22.src} alt="docker" class="marquee__logo">
-                <img src={logo23.src} alt="webflow" class="marquee__logo">
+                <img src={logo23.src} alt="webflow" class="marquee__logo webflow">
             </div>
         </div>
         
@@ -59,21 +59,21 @@ import logo23 from '../assets/logo23.png';
     <div class="marquee__2">
         <div class="marquee__roller__2">
             <div class="marquee__items">
-                <img src={logo1.src} alt="astro" class="marquee__logo">
+                <img src={logo1.src} alt="astro" class="marquee__logo astro">
                 <img src={logo2.src} alt="react" class="marquee__logo">
                 <img src={logo3.src} alt="vue" class="marquee__logo">
                 <img src={logo4.src} alt="html+js+css" class="marquee__logo">
-                <img src={logo5.src} alt="node" class="marquee__logo">
-                <img src={logo6.src} alt="python" class="marquee__logo">
-                <img src={logo7.src} alt="fastapi" class="marquee__logo">
+                <img src={logo5.src} alt="node" class="marquee__logo node">
+                <img src={logo6.src} alt="python" class="marquee__logo python">
+                <img src={logo7.src} alt="fastapi" class="marquee__logo fastapi">
                 <img src={logo8.src} alt="php" class="marquee__logo ">
                 <img src={logo9.src} alt="wordpress" class="marquee__logo">
-                <img src={logo10.src} alt="figma" class="marquee__logo">
-                <img src={logo11.src} alt="next" class="marquee__logo">
+                <img src={logo10.src} alt="figma" class="marquee__logo figma">
+                <img src={logo11.src} alt="next" class="marquee__logo next">
                 <img src={logo12.src} alt="mongo" class="marquee__logo">
-                <img src={logo13.src} alt="mysql" class="marquee__logo">
-                <img src={logo14.src} alt="windsurf" class="marquee__logo">
-                <img src={logo15.src} alt="typescript" class="marquee__logo">
+                <img src={logo13.src} alt="mysql" class="marquee__logo mysql">
+                <img src={logo14.src} alt="windsurf" class="marquee__logo windsurf">
+                <img src={logo15.src} alt="typescript" class="marquee__logo typescript">
                 <img src={logo16.src} alt="arduino" class="marquee__logo">
                 <img src={logo17.src} alt="checkoutchamp" class="marquee__logo">
                 <img src={logo18.src} alt="github" class="marquee__logo">
@@ -81,7 +81,7 @@ import logo23 from '../assets/logo23.png';
                 <img src={logo20.src} alt="google tag manager" class="marquee__logo">
                 <img src={logo21.src} alt="fb business manager" class="marquee__logo">
                 <img src={logo22.src} alt="docker" class="marquee__logo">
-                <img src={logo23.src} alt="webflow" class="marquee__logo">
+                <img src={logo23.src} alt="webflow" class="marquee__logo webflow">
             </div>
         </div>
     </div>
@@ -146,7 +146,6 @@ import logo23 from '../assets/logo23.png';
 
     }
 
-
     .marquee__roller__1{
         height: 100%;
         display: flex;
@@ -169,6 +168,31 @@ import logo23 from '../assets/logo23.png';
         align-items: center;
         justify-content: flex-start;
         width: max-content;
+    }
+
+    .astro{
+        transform: translateY(5px);
+        
+    }
+
+    .mysql{
+        transform: translateY(3.5px);
+    }
+
+     .webflow, .python, .windsurf, .typescript{
+        transform: translateY(2px);
+    }
+
+    .node{
+        transform: translateY(-2px);
+    }
+
+    .fastapi, .typescript, .figma, .mysql, .windsurf, .webflow{
+        height: calc(100% - 50px);
+    }
+
+    .next{
+        height: calc(100% - 30px);
     }
 </style>
 
