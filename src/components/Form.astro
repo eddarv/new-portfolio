@@ -122,8 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         emailjs.send('service_bigjkc5', 'template_46h1cte', {
             'g-recaptcha-response': token,
-            from_name: name,
-            from_email: email,
+            name: name,
+            email: email,
             message: message,
         }).then(response => {
             Swal.fire({
