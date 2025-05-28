@@ -7,7 +7,11 @@
     <h2 class="form__title">Contact me</h2>
     <div class="form__grid">
         <form action="" class="form__grid__inputs">
-            <div id="recaptcha-container" class="invisible-recaptcha" style="display:none;" data-sitekey="6LeHN0orAAAAAGCUY9xWq-Hb7E3skGCvdd7QWpLc" data-callback="onReCaptchaSuccess">
+            <div class="g-recaptcha"
+                data-sitekey="6LeHN0orAAAAAGCUY9xWq-Hb7E3skGCvdd7QWpLc"
+                data-callback="onReCaptchaSuccess"
+                data-size="invisible">
+            </div>
             </div>
             <div class="form__input-container">
                 <input type="text" placeholder="Name" class="form__input">
@@ -55,49 +59,59 @@ emailjs.init({
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.form__grid__inputs');
-    
 
     form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const name = form.querySelector('input[type="text"]').value.trim();
-    const email = form.querySelector('input[type="email"]').value.trim();
-    const message = form.querySelector('textarea').value.trim();
+        event.preventDefault();
+        const name = form.querySelector('input[type="text"]').value.trim();
+        const email = form.querySelector('input[type="email"]').value.trim();
+        const message = form.querySelector('textarea').value.trim();
 
-    if (!name || !email || !message) {
-        Swal.fire({
-          icon: 'warning',
-          title: 'Oops...',
-          text: 'Please fill in all fields.',
-          customClass: {
-            popup: 'swal2-popup',
-            icon: 'swal2-icon'
-          },
-          background: '#262235',
-          color: '#FFFFFF', // Texto claro
-    iconColor: '#FFFFFF', // Iconos claros
-        });
-        return;
-    }
+        if (!name || !email || !message) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Oops...',
+                text: 'Please fill in all fields.',
+                customClass: {
+                    popup: 'swal2-popup',
+                    icon: 'swal2-icon'
+                },
+                background: '#262235',
+                color: '#FFFFFF', // Texto claro
+                iconColor: '#FFFFFF', // Iconos claros
+            });
+            return;
+        }
 
-    const emailPattern = /^[a-zA-Z0–9._%+-]+@[a-zA-Z0–9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailPattern.test(email)) {
-        Swal.fire({
-          icon: 'error',
-          title: 'Invalid Email',
-          text: 'Please enter a valid email address.',
-          customClass: {
-            popup: 'swal2-popup',
-            icon: 'swal2-icon'
-          },
-          background: '#262235',
-          color: '#FFFFFF', // Texto claro
-    iconColor: '#FFFFFF', // Iconos claros
-        });
-        return;
-    }
+        const emailPattern = /^[a-zA-Z0–9._%+-]+@[a-zA-Z0–9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email)) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid Email',
+                text: 'Please enter a valid email address.',
+                customClass: {
+                    popup: 'swal2-popup',
+                    icon: 'swal2-icon'
+                },
+                background: '#262235',
+                color: '#FFFFFF', // Texto claro
+                iconColor: '#FFFFFF', // Iconos claros
+            });
+            return;
+        }
 
-    // Proceed to send email
-    grecaptcha.execute();
+        // Proceed to send email
+        if (typeof grecaptcha !== 'undefined' && grecaptcha.getResponse().length === 0) {
+            grecaptcha.execute();
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Captcha not loaded',
+                text: 'Please wait a few seconds and try again.',
+                background: '#262235',
+                color: '#FFFFFF',
+                iconColor: '#FFFFFF',
+            });
+        }
     });
 
     window.onReCaptchaSuccess = function(token) {
