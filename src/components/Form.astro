@@ -7,6 +7,8 @@
     <h2 class="form__title">Contact me</h2>
     <div class="form__grid">
         <form action="" class="form__grid__inputs">
+            <div id="recaptcha-container" class="invisible-recaptcha" style="display:none;" data-sitekey="6LeHN0orAAAAAGCUY9xWq-Hb7E3skGCvdd7QWpLc" data-callback="onReCaptchaSuccess">
+            </div>
             <div class="form__input-container">
                 <input type="text" placeholder="Name" class="form__input">
                 <div class="form__input__sub"></div>
@@ -19,7 +21,7 @@
                 <textarea name="" placeholder="Write your message..." id="" class="form__textarea"></textarea>
                 <div class="form__input__sub"></div>
             </div>
-            <button type="submit" class="form__button g-recaptcha" data-sitekey="6LeHN0orAAAAAGCUY9xWq-Hb7E3skGCvdd7QWpLc">
+            <button type="submit" class="form__button">
                 <span class="form__button__text">
                     Send message
                 </span>
@@ -95,59 +97,49 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Proceed to send email
-    sendEmail(name, email, message);
+    grecaptcha.execute();
     });
 
-    function sendEmail(name, email, message) {
-        const recaptchaToken = grecaptcha.getResponse();
-
-        if (!recaptchaToken) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Captcha Required',
-            text: 'Please verify that you are not a robot.',
-            background: '#262235',
-            color: '#FFFFFF',
-            iconColor: '#FFFFFF',
-        });
-        return;
-        }
+    window.onReCaptchaSuccess = function(token) {
+        const name = form.querySelector('input[type="text"]').value.trim();
+        const email = form.querySelector('input[type="email"]').value.trim();
+        const message = form.querySelector('textarea').value.trim();
 
         emailjs.send('service_bigjkc5', 'template_46h1cte', {
-            'g-recaptcha-response': recaptchaToken,
-            name: name,
-            email: email,
+            'g-recaptcha-response': token,
+            from_name: name,
+            from_email: email,
             message: message,
         }).then(response => {
             Swal.fire({
-            icon: 'success',
-            title: 'Email Sent!',
-            text: 'Your message has been sent successfully.',
-            customClass: {
-                popup: 'swal2-popup',
-                icon: 'swal2-icon'
-            },
-            background: '#262235',
-            color: '#FFFFFF', // Texto claro
-            iconColor: '#FFFFFF', // Iconos claros
+                icon: 'success',
+                title: 'Email Sent!',
+                text: 'Your message has been sent successfully.',
+                customClass: {
+                    popup: 'swal2-popup',
+                    icon: 'swal2-icon'
+                },
+                background: '#262235',
+                color: '#FFFFFF',
+                iconColor: '#FFFFFF',
             });
             grecaptcha.reset();
         }).catch(error => {
             Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'Failed to send email. Please try again later.',
-            customClass: {
-                popup: 'swal2-popup',
-                icon: 'swal2-icon'
-            },
-            background: '#262235',
-            color: '#FFFFFF', // Texto claro
-            iconColor: '#FFFFFF', // Iconos claros
+                icon: 'error',
+                title: 'Error',
+                text: 'Failed to send email. Please try again later.',
+                customClass: {
+                    popup: 'swal2-popup',
+                    icon: 'swal2-icon'
+                },
+                background: '#262235',
+                color: '#FFFFFF',
+                iconColor: '#FFFFFF',
             });
             grecaptcha.reset();
         });
-    }
+    };
 });
 </script>
 
