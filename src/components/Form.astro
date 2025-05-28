@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         const name = form.querySelector('input[type="text"]').value.trim();
         const email = form.querySelector('input[type="email"]').value.trim();
-        const message = form.querySelector('textarea').value.trim();
+        const message = form.querySelector('.form__textarea').value.trim();
 
         console.log(name, email, message);
 
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.onReCaptchaSuccess = function(token) {
         const name = form.querySelector('input[type="text"]').value.trim();
         const email = form.querySelector('input[type="email"]').value.trim();
-        const message = form.querySelector('textarea').value.trim();
+        const message = form.querySelector('.form__textarea').value.trim();
 
         emailjs.send('service_bigjkc5', 'template_46h1cte', {
             'g-recaptcha-response': token,
