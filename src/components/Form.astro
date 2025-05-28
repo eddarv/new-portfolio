@@ -65,6 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = form.querySelector('input[type="email"]').value.trim();
         const message = form.querySelector('textarea').value.trim();
 
+        console.log(name, email, message);
+
         if (!name || !email || !message) {
             Swal.fire({
                 icon: 'warning',
