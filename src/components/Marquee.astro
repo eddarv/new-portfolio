@@ -197,7 +197,7 @@ import logo23 from '../assets/logo23.png';
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
     const marqueeContainer = document.querySelector('.marquee__1');
     const originalRoller = document.querySelector('.marquee__roller__1');
     let currentRoller = originalRoller;
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //   console.log(currentPosition + currentRoller.offsetWidth)
 
       if (cloneRoller) {
-        if (currentRoller.getBoundingClientRect().right <= window.innerWidth) {
+        if (currentRoller.getBoundingClientRect().right <= (window.innerWidth - (window.innerWidth - marqueeContainer.offsetWidth)/2)) {
 
           const clonePosition = parseFloat(cloneRoller.style.transform.replace('translateX(', '').replace('px)', ''));
           cloneRoller.style.transform = `translateX(${clonePosition - scrollSpeed}px)`;
@@ -256,13 +256,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
       if (cloneRoller2) {
-        if (currentRoller2.getBoundingClientRect().left >= 0) {
+        if (currentRoller2.getBoundingClientRect().left >= (window.innerWidth - marqueeContainer2.offsetWidth)/2) {
 
           const clonePosition2 = parseFloat(cloneRoller2.style.transform.replace('translateX(', '').replace('px)', ''));
           cloneRoller2.style.transform = `translateX(${clonePosition2 + scrollSpeed}px)`;
 
         // Check if the original roller is out of view
-            if (currentRoller2.getBoundingClientRect().left >= window.innerWidth) {
+            if (currentRoller2.getBoundingClientRect().left >= (marqueeContainer2.offsetWidth + (window.innerWidth - marqueeContainer2.offsetWidth)/2)) {
                 marqueeContainer2.removeChild(currentRoller2);
                 currentRoller2 = cloneRoller2;
                 cloneRoller2 = null;

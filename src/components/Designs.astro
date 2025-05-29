@@ -1,6 +1,13 @@
 ---
 import unloop from '../assets/Unloop.png';
 import relax from '../assets/Relax.png';
+import unloopDesign from '../assets/unloop-design.png';
+import relaxDesign from '../assets/relax-design.png';
+
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-thumbnail.css';
+import 'lightgallery/css/lg-zoom.css';
+
 
 ---
 
@@ -17,13 +24,18 @@ import relax from '../assets/Relax.png';
                 </div>
             </div>
         </div>
-        <div class="designs__item__img-container">
-            <img src={unloop.src} alt="UnloopNow" class="designs__item__img">
+        <div id="lightgallery">
+            <a href={unloopDesign.src} class="designs__item__img-container gallery-item">
+                <img src={unloop.src} alt="UnloopNow" class="designs__item__img">
+            </a>
         </div>
+        
     </article>
     <article class="designs__item">
-        <div class="designs__item__img-container">
-            <img src={relax.src} alt="RelaxApp" class="designs__item__img">
+        <div id="lightgallery2">
+            <a href={relaxDesign.src} class="designs__item__img-container gallery-item">
+                <img src={relax.src} alt="RelaxApp" class="designs__item__img">
+            </a>
         </div>
         <div class="designs__item__texts">
             <div class="designs__inner-texts--right">
@@ -38,11 +50,29 @@ import relax from '../assets/Relax.png';
     </article>
 </section>
 
+<script>
+    import lightGallery from 'lightgallery';
+    import lgThumbnail from 'lightgallery/plugins/thumbnail';
+    import lgZoom from 'lightgallery/plugins/zoom';
+  
+    lightGallery(document.getElementById('lightgallery'), {
+        plugins: [lgZoom, lgThumbnail],
+        download: false,
+        speed: 500,
+    });
+
+    lightGallery(document.getElementById('lightgallery2'), {
+        plugins: [lgZoom, lgThumbnail],
+        download: false,
+        speed: 500,
+    });
+</script>
+
 <style>
     .designs{
         padding-top: 120px;
-        padding-left: 60px;
-        padding-right: 60px;
+        padding-left: 100px;
+        padding-right: 100px;
         width: 100%;
         box-sizing: border-box;
         font-family: "Montserrat";
@@ -52,7 +82,7 @@ import relax from '../assets/Relax.png';
     }
 
     .designs__title{
-        font-size: 70px;
+        font-size: 60px;
         padding-bottom: 120px;
         margin: 0;
         opacity: 70%;
@@ -93,6 +123,12 @@ import relax from '../assets/Relax.png';
         text-align: right;
     }
 
+    #lightgallery, #lightgallery2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
     .designs__item__img-container{
         width: 50%;
         display: flex;
@@ -117,6 +153,15 @@ import relax from '../assets/Relax.png';
         max-width: 650px;
         padding-left: 80px;
 
+    }
+
+    .designs__item__img{
+        transition: transform 0.3s ease;
+    }
+
+    .designs__item__img:hover{
+        transform: scale(1.1);
+        cursor: pointer;
     }
 
 </style>
