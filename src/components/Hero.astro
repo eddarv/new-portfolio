@@ -577,4 +577,94 @@ import vector from '../assets/Vector2.svg';
 
 
 }
+
+@media (max-width: 1100px) {
+    .hero__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero__code{
+        display: none;
+    }
+    .hero__titles{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 0;
+        padding-top: 120px;
+    }
+    .hero__title{
+        padding: 0;
+        padding-bottom: 200px;
+        margin: 0;
+        text-align: center;
+    }
+    .hero__subtitle{
+        padding: 0;
+    }
+    .hero__cta{
+        margin: 0;
+    }
+    .hero__tag{
+        display: none;
+    }
+    .hero__background{
+        width: 100%;
+        overflow: hidden;
+    }
+    .hero__background{
+        transform: translateY(90px);
+    }
+    .hero__graphics{
+        display: none;
+    }
+
+    @media (max-width: 550px) {
+        .hero__title{
+            font-size: 40px;
+        }
+        .hero__subtitle{
+            font-size: 20px;
+        }
+        .hero__cta{
+            font-size: 20px;
+        }
+        .hero__logo-container{
+            width: 250px;
+            height: 250px;
+        }
+        .hero__logo--bright-1{
+            width: 200px;
+            height: 200px;
+            left: 52%;
+            top: 56%;
+        }
+        .hero__logo--bright-2{
+            width: 200px;
+            height: 200px;
+            left: 50%;
+            top: 52%;
+        }
+
+        .hero__titles{
+            padding-top: 60px;
+        }
+        .hero__background{
+            transform: translateY(0);
+        }
+
+        .pentagon_3{
+            display: none  ;
+        }
+        .pentagon_2{
+            display: none  ;
+        }
+        .pentagon_1{
+            display: none  ;
+        }
+    }
+    
+}
 </style>

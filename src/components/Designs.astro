@@ -12,6 +12,7 @@ import 'lightgallery/css/lg-zoom.css';
 ---
 
 <section class="designs" id="designs">
+    <h2 class="designs__title--mobile">Selected Designs</h2>
     <article class="designs__item">
         <div class="designs__item__texts">
             <h2 class="designs__title">Selected Designs</h2>
@@ -130,7 +131,7 @@ import 'lightgallery/css/lg-zoom.css';
         width: 50%;
     }
     .designs__item__img-container{
-        width: 50%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -156,6 +157,7 @@ import 'lightgallery/css/lg-zoom.css';
     }
 
     .designs__item__img{
+        width: 100%;
         transition: transform 0.3s ease;
     }
 
@@ -164,4 +166,95 @@ import 'lightgallery/css/lg-zoom.css';
         cursor: pointer;
     }
 
+    .designs__title--mobile{
+        display: none;
+    }
+
+    @media (max-width: 1000px) {
+        .designs__title{
+            display: none;
+        }
+        .designs__title--mobile{
+            display: block;
+            font-size: 60px;
+            padding-bottom: 120px;
+            margin: 0;
+            opacity: 70%;
+            font-weight: 500;
+            text-align: right;
+            padding-right: 80px;
+            text-align: center;
+            padding-bottom: 80px;
+            padding-right: 0;
+        }
+
+        .designs__item{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .designs__inner-texts--left{
+            padding-right: 0;
+            padding-left: 0;
+            width: 100%;
+            max-width: none;
+        }   
+
+        .designs__inner-texts--right{
+            padding-right: 0;
+            padding-left: 0;
+            width: 100%;
+            max-width: none;
+        }
+        .designs__item__texts{
+            width: 100%;
+            max-width: none;
+        }
+
+        .designs__item__paragraph--right{
+            text-align: left;
+        }
+        .designs__item__title{
+            text-align: center;
+        }
+
+        #lightgallery{
+            order: 1;
+            width: 100%;
+        }
+        #lightgallery2{
+            order: 1;
+            width: 100%;
+        }   
+
+        .designs__item__texts{
+            order: 2;
+        }
+    }
+
+    @media (max-width: 550px) {
+        .designs{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .designs__title--mobile{
+            font-size: 40px;
+        }
+        .designs__item__paragraph{
+            font-size: 16px;
+        }
+
+        .designs__item__title{
+            font-size: 24px !important;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .designs{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
 </style>

@@ -117,4 +117,23 @@ import logo from '../assets/logo.svg';
       filter: blur(40px);
       background: #0c020d;
     }
+
+    @media (max-width: 950px) {
+        .header__nav{
+            display: none;
+            background: none;
+        }
+        .header{
+          justify-content: center;
+          align-self: center;
+          position: relative;
+          padding-bottom: 0;
+        }
+        .header__blur{
+          display: none;
+        }
+        .header__blur--2{
+          display: none;
+        }
+    }
   </style>
